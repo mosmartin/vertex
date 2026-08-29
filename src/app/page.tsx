@@ -112,23 +112,21 @@ export default function Home() {
       </div>
 
       {/* Decorative graphic */}
-      <div className="px-6">
-        <div
-          aria-hidden="true"
-          className="mx-auto mt-12 flex h-40 w-full max-w-360 items-end justify-center gap-2 overflow-hidden sm:gap-3"
-        >
-          {barHeights.map((height, index) => (
-            <span
-              key={index}
-              className="w-6 shrink-0 rounded-t-md sm:w-9"
-              style={{
-                height,
-                background:
-                  "linear-gradient(to top, transparent, var(--color-primary-300) 40%, var(--color-primary-400))",
-              }}
-            />
-          ))}
-        </div>
+      <div
+        aria-hidden="true"
+        className="mt-12 flex h-40 w-full items-end justify-center gap-1.5 overflow-hidden sm:gap-2"
+      >
+        {barHeights.map((height, index) => (
+          <span
+            key={index}
+            className="w-7 shrink-0 rounded-t-md sm:w-10"
+            style={{
+              height,
+              background:
+                "linear-gradient(to top, transparent 8%, var(--color-primary-300) 55%, var(--color-primary-500))",
+            }}
+          />
+        ))}
       </div>
     </div>
   );
