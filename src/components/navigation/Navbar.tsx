@@ -1,3 +1,4 @@
+import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import { Icon } from "@/components/ui/Icon";
 
 export function Navbar() {
@@ -28,9 +29,27 @@ export function Navbar() {
           >
             <Icon name="bell" size={18} />
           </button>
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-neutral-500">
-            <Icon name="user" size={16} filled />
-          </span>
+          <Show when="signed-out">
+            <SignInButton>
+              <button
+                type="button"
+                className="text-sm font-medium text-neutral-700 hover:text-neutral-900"
+              >
+                Sign in
+              </button>
+            </SignInButton>
+            <SignUpButton>
+              <button
+                type="button"
+                className="text-sm font-medium text-neutral-700 hover:text-neutral-900"
+              >
+                Sign up
+              </button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
         </div>
       </div>
     </nav>
