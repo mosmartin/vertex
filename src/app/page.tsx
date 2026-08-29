@@ -40,7 +40,7 @@ const courses = [
   },
 ];
 
-const barHeights = [28, 44, 34, 60, 40, 72, 50, 88, 60, 40, 76, 52, 32, 64, 44, 30];
+const barHeights = [32, 56, 84, 112, 64, 44, 68, 0, 0, 52, 78, 108, 132, 88, 58, 96];
 
 export default function Home() {
   return (
@@ -116,17 +116,21 @@ export default function Home() {
         aria-hidden="true"
         className="mt-12 flex h-40 w-full items-end justify-center gap-1.5 overflow-hidden sm:gap-2"
       >
-        {barHeights.map((height, index) => (
-          <span
-            key={index}
-            className="w-7 shrink-0 rounded-t-md sm:w-10"
-            style={{
-              height,
-              background:
-                "linear-gradient(to top, transparent 8%, var(--color-primary-300) 55%, var(--color-primary-500))",
-            }}
-          />
-        ))}
+        {barHeights.map((height, index) =>
+          height === 0 ? (
+            <span key={index} className="w-7 shrink-0 sm:w-10" />
+          ) : (
+            <span
+              key={index}
+              className="w-7 shrink-0 rounded-t-md sm:w-10"
+              style={{
+                height,
+                background:
+                  "linear-gradient(to top, var(--color-primary-500), var(--color-primary-300) 55%, transparent)",
+              }}
+            />
+          ),
+        )}
       </div>
     </div>
   );
