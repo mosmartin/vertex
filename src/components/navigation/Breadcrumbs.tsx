@@ -1,6 +1,6 @@
 import { Icon } from "@/components/ui/Icon";
 
-export function Breadcrumbs({ items }: { items: string[] }) {
+export function Breadcrumbs({ items }: Readonly<{ items: string[] }>) {
   return (
     <nav className="flex items-center gap-2 text-sm text-neutral-500">
       {items.map((item, index) => {

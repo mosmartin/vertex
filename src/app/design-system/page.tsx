@@ -15,11 +15,11 @@ function Section({
   index,
   title,
   children,
-}: {
+}: Readonly<{
   index: string;
   title: string;
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <section className="rounded-lg border border-neutral-200 bg-white p-6">
       <div className="mb-6 flex items-center gap-2">
@@ -33,7 +33,7 @@ function Section({
   );
 }
 
-function Swatch({ name, hex }: { name: string; hex: string }) {
+function Swatch({ name, hex }: Readonly<{ name: string; hex: string }>) {
   return (
     <div className="flex flex-col gap-2">
       <div

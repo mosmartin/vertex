@@ -1,10 +1,10 @@
 export function ProgressBar({
   value,
   showLabel = true,
-}: {
+}: Readonly<{
   value: number;
   showLabel?: boolean;
-}) {
+}>) {
   const clamped = Math.min(100, Math.max(0, value));
   return (
     <div className="flex items-center gap-3">

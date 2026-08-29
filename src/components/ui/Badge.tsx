@@ -12,10 +12,10 @@ const variants: Record<BadgeVariant, string> = {
 export function Badge({
   variant = "neutral",
   children,
-}: {
+}: Readonly<{
   variant?: BadgeVariant;
   children: ReactNode;
-}) {
+}>) {
   return (
     <span
       className={[
