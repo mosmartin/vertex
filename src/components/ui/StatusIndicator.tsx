@@ -29,7 +29,7 @@ const config: Record<Status, { icon: IconName; label: string; className: string;
   },
 };
 
-export function StatusIndicator({ status }: { status: Status }) {
+export function StatusIndicator({ status }: Readonly<{ status: Status }>) {
   const { icon, label, className, filled } = config[status];
   return (
     <span className={["inline-flex items-center gap-1.5 text-sm font-medium", className].join(" ")}>

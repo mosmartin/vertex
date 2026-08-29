@@ -3,10 +3,10 @@ import { Icon } from "@/components/ui/Icon";
 export function Pagination({
   current,
   total,
-}: {
+}: Readonly<{
   current: number;
   total: number;
-}) {
+}>) {
   const pages = [1, 2, 3];
 
   return (

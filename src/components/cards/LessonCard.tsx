@@ -6,12 +6,12 @@ export function LessonVideoCard({
   description,
   meta,
   cta,
-}: {
+}: Readonly<{
   title: string;
   description: string;
   meta: string;
   cta: string;
-}) {
+}>) {
   return (
     <div className="flex flex-col gap-4 rounded-lg border border-neutral-200 bg-white p-5 shadow-sm">
       <Badge variant="video">Video</Badge>

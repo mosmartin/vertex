@@ -1,24 +1,31 @@
+import type { ReactNode } from "react";
 import { Icon } from "@/components/ui/Icon";
 
 export function CourseCard({
   initial,
+  icon,
+  iconClassName = "bg-neutral-900 text-white",
   title,
   description,
   level,
   duration,
   modules,
-}: {
+}: Readonly<{
   initial: string;
+  icon?: ReactNode;
+  iconClassName?: string;
   title: string;
   description: string;
   level: string;
   duration: string;
   modules: string;
-}) {
+}>) {
   return (
     <div className="flex flex-col gap-4 rounded-lg border border-neutral-200 bg-white p-5 shadow-sm">
-      <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-neutral-900 font-display text-lg font-bold text-white">
-        {initial}
+      <div
+        className={`flex h-11 w-11 items-center justify-center rounded-sm font-display text-lg font-bold ${iconClassName}`}
+      >
+        {icon ?? initial}
       </div>
       <div className="flex flex-col gap-1">
         <h3 className="text-base font-semibold text-neutral-900">{title}</h3>

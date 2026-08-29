@@ -20,6 +20,7 @@ export type IconName =
   | "grid"
   | "target"
   | "accessibility"
+  | "star"
   | "logo-mark";
 
 type IconProps = SVGProps<SVGSVGElement> & {
@@ -85,6 +86,9 @@ const paths: Record<IconName, React.ReactNode> = {
   ),
   accessibility: (
     <path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM5 8.5 11 7v3.2L6.4 11.6l-.7 2 4.4-1.1L9 22h2.2l1.3-6h1l1.3 6H17l-1.1-9.5 4.4 1.1-.7-2L15 10.2V7l6 1.5.5-2L12 4l-9.5 2.5.5 2Z" />
+  ),
+  star: (
+    <path d="m12 3 2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6L12 3Z" />
   ),
   "logo-mark": (
     <path d="M3 4h4.2L12 14.5 16.8 4H21l-9 17L3 4Z" />

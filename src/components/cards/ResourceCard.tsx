@@ -4,11 +4,11 @@ export function ResourceCard({
   title,
   description,
   meta,
-}: {
+}: Readonly<{
   title: string;
   description: string;
   meta: string;
-}) {
+}>) {
   return (
     <div className="flex flex-col gap-4 rounded-lg border border-neutral-200 bg-white p-5 shadow-sm">
       <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary-100 text-primary-500">
